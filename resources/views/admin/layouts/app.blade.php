@@ -7,23 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <title>@yield('title') - {{config('app.name')}}</title>
+
+    <title>@yield('title') - {{ config('app.name') }}</title>
 
 </head>
 
 <body>
-    <head>
+    <section class="container px-4 mx-auto">
         @yield('header')
-    </head>
 
-    <div id="content">
-        @yield('content')
-    </div>
+        <head>
+            @yield('header')
+        </head>
 
-    <footer>
-        $default footer
-    </footer>
+        <div>
+            @yield('content')
+        </div>
+    </section>
 </body>
 
 </html>
